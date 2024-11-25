@@ -1,13 +1,13 @@
-package com.xworkz.paint.runner;
+package com.xworkz.fan.runner;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
-import com.xworkz.paint.DTO.PaintDTO;
+import com.xworkz.fan.DTO.FanDTO;
 
-public class PaintRunner {
+public class FanRunner {
 	public static void main(String[] args) {
 		EntityManagerFactory eMF = Persistence.createEntityManagerFactory("TestPersistence");
 		EntityManager eM = eMF.createEntityManager();
@@ -15,15 +15,15 @@ public class PaintRunner {
 
 		try {
 			eT.begin();
-			PaintDTO dto = new PaintDTO();
+			FanDTO dto = new FanDTO();
 			dto.setId(5);
-			dto.setColor("peach");
-			dto.setBrand("Asian Paints");
-			dto.setPrice(250);
-			dto.setQuantity(1000);
+			dto.setBrand("Bajaj");
+			dto.setPrice(1000);
+			dto.setRemoteControlled(true);
+			dto.setSpeed(500);
 			eM.persist(dto);
 			eT.commit();
-			System.out.println("Paint data saved successfully!");
+			System.out.println("Fan data saved successfully!");
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
