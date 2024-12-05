@@ -11,10 +11,11 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "trainer_table")
 @NamedQuery(name="findByName",query="Select dto from TDTO dto where dto.name='Priya Singh'")
-@NamedQuery(name="findByName",query="Select dto from TDTO dto where dto.email=Priya Singh@gmail.com")
-@NamedQuery(name = "findAll", query = "SELECT t FROM TDTO t")
-@NamedQuery(name = "findByAgeGreaterThan", query = "SELECT t.name, t.ph FROM TDTO t WHERE t.age > 15")
-@NamedQuery(name = "findByNameStartsWith", query = "SELECT t.email FROM TDTO t WHERE t.name LIKE :S%")
+@NamedQuery(name="findById",query="Select dto from TDTO dto where dto.email='neha.gupta@example.com'")
+@NamedQuery(name = "findByAgeAndPhoneNo", query = "select dto from TDTO dto where dto.id=5")
+@NamedQuery(name = "findBySpecialization", query = "SELECT dto FROM TDTO dto WHERE dto.specialization = :specialization")
+@NamedQuery(name="findByExperienceYear",query ="select dto from TDTO dto where dto.name='Rajesh Kumar' ")
+
 public class TDTO {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
