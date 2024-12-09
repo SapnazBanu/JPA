@@ -28,6 +28,7 @@ import javax.persistence.Table;
 
 @NamedQuery(name = "updateByNameAndEmail",query = "UPDATE EmployeeCard e SET e.weight = :weight WHERE e.name = :name AND e.email = :email")
 
+@NamedQuery(name = "User.countByEmailAndDate",query = "SELECT COUNT(u) FROM  EmployeeCard u WHERE u.email = :email AND u.joiningDate = :joiningDate")
 public class EmployeeCard {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
