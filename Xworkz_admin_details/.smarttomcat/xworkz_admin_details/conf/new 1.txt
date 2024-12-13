@@ -1,0 +1,28 @@
+30/09/2024
+Web Technology 
+wht is attribute?-->
+
+
+CSS:
+3 ways
+1.Inline CSS-->can write inside HTML element
+2.Internal CSS-->can write HTML document using Style tag
+3.External CSS-->seperate .css link using link tag
+
+
+element selector
+Id selector
+Class Selector
+
+
+CSS Properties
+1.Color
+2.font-style
+3.text-transform
+4.font-damily
+5.background-color
+6.line-height
+7.text-align
+8.word-spacing
+9.letter-spacing
+10.
