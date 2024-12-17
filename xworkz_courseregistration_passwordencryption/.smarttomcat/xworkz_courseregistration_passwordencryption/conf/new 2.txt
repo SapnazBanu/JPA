@@ -1,0 +1,13 @@
+Ecom ecom=(String item,int quantity)->{
+System.out.println("Running Ecom");
+;
+
+OnlineShop onlineShop=(String item,int quantity,double discount)->
+{
+System.out.println("Running OnlineShop");
+};
+
+FoodApp foodApp=(String item)->
+{
+System.out.println("Running FoodApp");
+};
